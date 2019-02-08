@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
 import './css/pure-min.css';
 import './css/side-menu.css';
-import $ from'jquery';
-import InputCustomizado from './componentes/InputCustomizado.js';
-import FormDialog from './componentes/FormDialog.js';
-import FormDialogAtualiza from './componentes/FormDialogAtualiza.js';
-import TratadorErros from './TratadorErros.js'
 
 
 
 class App extends Component {
   
+    constructor(){
+        super();
+        this.state = {usuario: localStorage.getItem('usuario')};
 
-
+    }
+    
   render() {
+    
     return (
 
      <div id="layout">
@@ -30,6 +30,7 @@ class App extends Component {
             <ul className="pure-menu-list">
                 <li className="pure-menu-item pure-menu-selected"><a href="#" className="pure-menu-link">Home</a></li>
                 <li className="pure-menu-item"><a href="./Produto" className="pure-menu-link">Produto</a></li>
+                <li className="pure-menu-item"><a href="./logout" className="pure-menu-link">Sair</a></li>
 
             </ul>
         </div>
@@ -37,7 +38,7 @@ class App extends Component {
 
     <div id="main">
         <div className="header">
-            <h1>Página Inicial</h1>
+            <h1>Bem Vindo {this.state.usuario.nome}</h1>
             
         </div>
 

@@ -103,9 +103,9 @@ class App extends Component {
             <a className="pure-menu-heading" href="#">Almoxarifado</a>
 
             <ul className="pure-menu-list">
-                <li className="pure-menu-item "><a href="./" className="pure-menu-link">Home</a></li>
+                <li className="pure-menu-item "><a href="./home" className="pure-menu-link">Home</a></li>
                 <li className="pure-menu-item pure-menu-selected"><a href="#" className="pure-menu-link">Produto</a></li>
-
+                <li className="pure-menu-item"><a href="./logout" className="pure-menu-link">Sair</a></li>  
             </ul>
         </div>
     </div>
