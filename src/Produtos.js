@@ -13,7 +13,7 @@ class App extends Component {
   
   constructor(){
     super();
-    this.state = {lista : [],nome:'',quantidade:''}
+    this.state = {lista : [],nome:'',quantidade:'', msg: ''}
     this.enviaForm = this.enviaForm.bind(this);
     this.setNome = this.setNome.bind(this);
     this.setQuantidade = this.setQuantidade.bind(this);
@@ -48,7 +48,7 @@ class App extends Component {
       type:'POST',
       data:JSON.stringify({nome:this.state.nome,quantidade:this.state.quantidade}),
       success: function(resposta){
-        
+        alert("Produto salvo com sucesso!");
         this.setState({lista:resposta});
       }.bind(this),
       error: function(resposta){
@@ -116,7 +116,7 @@ class App extends Component {
             <form className="pure-form pure-form-aligned" onSubmit={this.enviaForm} method="post">
               
                 <fieldset>
-                    
+                    <span>{this.state.msg}</span>
                     <InputCustomizado id="nome" name="nome" label="Nome" placeholder="Ex: café, sabão..." type="text" value={this.state.nome} onChange={this.setNome}/>
                     <InputCustomizado id="quantidade" name="quantidade" label="Quantidade Inicial" placeholder="123" type="number" value={this.state.quantidade} onChange={this.setQuantidade}/>
                     

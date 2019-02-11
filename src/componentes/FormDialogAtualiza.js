@@ -47,8 +47,9 @@ export default class FormDialog extends React.Component {
       type:'PUT',
       data:JSON.stringify({nome:nome,quantidade:quantidade}),
       success: function(resposta){
-        console.log(resposta);
+        
         PubSub.publish('atualiza');
+        alert("Produto atualizado com sucesso!");
       },
       error: function(resposta){
         
