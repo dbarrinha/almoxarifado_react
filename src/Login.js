@@ -20,7 +20,7 @@ export default class Login extends Component {
 			})
 		};
 
-		fetch('http://localhost/api/login',requestInfo)
+		fetch('http://mobilaravel.herokuapp.com/api/login',requestInfo)
 			.then(response => {
 				if(response.ok){
 					return response.text();
