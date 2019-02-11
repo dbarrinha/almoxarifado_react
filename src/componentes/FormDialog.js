@@ -33,7 +33,7 @@ export default class FormDialog extends React.Component {
     
     evento.preventDefault();
     $.ajax({
-      url:'http://localhost/api/produtos/'+this.props.id,
+      url:'http://mobilaravel.herokuapp.com/api/produtos/'+this.props.id,
       contentType: 'application/json',
       dataType:'json',
       type:'PUT',

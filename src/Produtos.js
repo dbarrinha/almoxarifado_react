@@ -24,7 +24,7 @@ class App extends Component {
 
   componentDidMount(){
     $.ajax({
-      url:"http://localhost/api/produtos",
+      url:"http://mobilaravel.herokuapp.com/api/produtos",
       dataType: 'json',
       success:function(resposta){
         this.setState({lista:resposta});
@@ -42,7 +42,7 @@ class App extends Component {
   enviaForm(evento){
     evento.preventDefault();
     $.ajax({
-      url:'http://localhost/api/produtos',
+      url:'http://mobilaravel.herokuapp.com/api/produtos',
       contentType: 'application/json',
       dataType:'json',
       type:'POST',
@@ -73,7 +73,7 @@ class App extends Component {
   atualizaLista(evento){
     
       $.ajax({
-      url:"http://localhost/api/produtos",
+      url:"http://mobilaravel.herokuapp.com/api/produtos",
       dataType: 'json',
       success: function(resposta){
         
